@@ -1,0 +1,11 @@
+<view class="container">
+  <view bindtap="bindViewTap" class="header">
+    欢迎<text class="userinfo-nickname">{{userInfo.nickName}}</text>使用
+  </view>
+
+  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  <view>
+    <button class="btn" bindtap="tolist">做什么</button>
+    <button class="btn" bindtap="toeat">吃什么</button>
+  </view>
+</view>

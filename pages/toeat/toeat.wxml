@@ -1,0 +1,49 @@
+<view class="container">
+  <view bindtap="bindViewTap" class="header">
+    欢迎使用 下餐吃什么
+  </view>
+  <view id="menu">
+    {{condition == -1 ? "" : menu[condition]}}
+  </view>
+  <view class="flex-row">
+    <button bindtap="getcondition" class="btn">
+      吃什么
+    </button>
+    <button bindtap="addmenu" class="btn">
+      增加菜品
+    </button>
+  </view>
+  <view class="flex-row">
+    <button bindtap="listmenu" class="btn">
+      查看菜品
+    </button>
+    <button bindtap="delectmenu" class="btn">
+      删除菜品
+    </button>
+  </view>
+
+  <modal hidden="{{hiddenmodalput}}" title="请输入菜品名" confirm-text="确定" cancel-text="取消" bindcancel="cancel"
+    bindconfirm="confirm">
+    <input type='text' placeholder="请输入内容" bindinput="input" />
+  </modal>
+
+  <modal hidden="{{hiddenlistmenu}}" title="查看菜品名" bindconfirm="back" confirm-text="返回" no-cancel="false"
+    no-confirm="false">
+    <view value="id:{{ item }}"  id="show" wx:for="{{ menu }}" wx:key="*this" class="">
+      <text>{{index+1}}:</text>
+      <text data-id="{{index}}" class="cnt" bindtap="toChange">{{menu[index]}}</text>
+    </view>
+  </modal>
+
+  <modal hidden="{{hiddendelectmenu}}" title="删除菜品" bindconfirm="back2" confirm-text="返回" no-cancel="false"
+    no-confirm="false" >
+    <view value="id:{{ item }}"  id="show" wx:for="{{ menu }}" wx:key="*this" class="delectview" data-id="{{index}}">
+      <text>{{index+1}}:</text>
+      <text data-id="{{index}}" class="cnt" bindtap="toChange">{{menu[index]}}</text>
+      <button class="delectbutton" bindtap="delectmenubutton"  data-id="{{index}}" >
+        删除
+      </button>
+    </view>
+  </modal>
+
+</view>

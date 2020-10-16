@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/catelog/catelog",
+    "pages/todo/todo",
+    "pages/toeat/toeat"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#656e7f",
+    "navigationBarTitleText": "生活小助手",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

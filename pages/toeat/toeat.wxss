@@ -1,0 +1,52 @@
+.header {
+  text-align: center;
+  font-size: 40rpx;
+  color: #ae9e84;
+  margin-bottom: 40px;
+  width:100%;
+  position: relative;
+  height:50px;
+}
+
+#menu {
+  height: 20px;
+  margin-bottom: 40px;
+}
+
+#show {
+  margin-left: 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.delectview {
+  display: flex;
+  align-items: flex-end;
+}
+
+.delectbutton {
+  background-color: lightblue;
+}
+
+.flex-row{
+  display: flex;
+  margin: 10rpx 0;
+  width: 670rpx;
+  align-items: center;
+  justify-content: space-evenly;
+  -webkit-box-pack: justify;
+}
+
+.btn{  
+  border-radius: 5px;
+  font-size: 25rpx;
+  line-height: 100rpx;
+  display: block;
+  background: #6fa6cf;
+  margin: 30rpx 10rpx;
+  width: 80px;
+  border-radius: 50px;
+  box-shadow: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
